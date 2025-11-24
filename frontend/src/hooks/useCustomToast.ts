@@ -11,13 +11,13 @@ const useCustomToast = () => {
     })
   }
 
-  // const showErrorToast = (description: string) => {
-  //   toaster.create({
-  //     title: "Something went wrong!",
-  //     description,
-  //     type: "error",
-  //   })
-  // }
+  const showErrorToast = (description: string) => {
+    toaster.create({
+      title: "Something went wrong!",
+      description,
+      type: "error",
+    })
+  }
 
   return { showSuccessToast, showErrorToast }
 }
