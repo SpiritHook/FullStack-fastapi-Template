@@ -41,12 +41,12 @@ const useAuth = () => {
     },
   })
 
-  const login = async (data: AccessToken) => {
-    const response = await LoginService.loginAccessToken({
-      formData: data,
-    })
-    localStorage.setItem("access_token", response.access_token)
-  }
+  // const login = async (data: AccessToken) => {
+  //   const response = await LoginService.loginAccessToken({
+  //     formData: data,
+  //   })
+  //   localStorage.setItem("access_token", response.access_token)
+  // }
 
   const loginMutation = useMutation({
     mutationFn: login,
@@ -58,10 +58,10 @@ const useAuth = () => {
     },
   })
 
-  const logout = () => {
-    localStorage.removeItem("access_token")
-    navigate({ to: "/login" })
-  }
+  // const logout = () => {
+  //   localStorage.removeItem("access_token")
+  //   navigate({ to: "/login" })
+  // }
 
   return {
     signUpMutation,
