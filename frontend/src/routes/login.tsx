@@ -29,18 +29,18 @@ export const Route = createFileRoute("/login")({
 
 function Login() {
   const { loginMutation, error, resetError } = useAuth()
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<AccessToken>({
-    mode: "onBlur",
-    criteriaMode: "all",
-    defaultValues: {
-      username: "",
-      password: "",
-    },
-  })
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors, isSubmitting },
+  // } = useForm<AccessToken>({
+  //   mode: "onBlur",
+  //   criteriaMode: "all",
+  //   defaultValues: {
+  //     username: "",
+  //     password: "",
+  //   },
+  // })
 
   const onSubmit: SubmitHandler<AccessToken> = async (data) => {
     if (isSubmitting) return
